@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home/Home';
 import ErrorHandle from './components/ErrorHandle/ErrorHandle';
+import Meals from './components/Meals/Meals.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,10 +19,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <App/>
+        element: <App />
       },
       {
-        
+        path: '/meals',
+        element: <Meals />,
+        loader: () => fetch("https://www.themealdb.com/api/json/v1/1/categories.php"),
       }
     ]
   }
@@ -29,6 +32,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
