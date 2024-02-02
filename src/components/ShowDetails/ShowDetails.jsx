@@ -12,7 +12,7 @@ const ShowDetails = ({ meal }) => {
      }
 
      return (
-          <div className='border-2 border-green-600 rounded-md mt-8 shadow-lg'>
+          <div className='border-2 border-green-600 rounded-md mb-5 shadow-lg'>
                <div className='flex place-content-center'>
                     <img className='w-5/6 p-3 h-auto' src={strMealThumb} alt="" />
                </div>
