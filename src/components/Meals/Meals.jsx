@@ -8,7 +8,7 @@ const Meals = () => {
      return (
           <div className='grid md:grid-cols-3 gap-4 mt-5'>
                {
-                    meals.categories.map(meal => <Meal
+                    meals.categories?.map(meal => <Meal
                          key={meal.idCategory}
                          meal = {meal}
                     />)
